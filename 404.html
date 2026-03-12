@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Not Found | Audrey's Style Bar</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <style>
+    .error-page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 8rem 1.5rem 4rem;
+      background: var(--pink-lightest);
+    }
+    .error-page h1 {
+      font-family: var(--font-display);
+      font-size: clamp(4rem, 10vw, 7rem);
+      font-weight: 400;
+      color: var(--pink-light);
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+    .error-page h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.3rem, 3vw, 1.8rem);
+      font-weight: 400;
+      color: var(--black);
+      margin-bottom: 1rem;
+    }
+    .error-page p {
+      color: var(--gray-text);
+      font-size: 1rem;
+      margin-bottom: 2rem;
+      max-width: 400px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav aria-label="Main navigation">
+      <a href="/" class="nav-logo" aria-label="Audrey's Style Bar home">
+        <img src="/assets/logos/black-logo.webp" alt="Audrey's Style Bar" width="160" height="52">
+      </a>
+      <ul class="nav-links" id="navLinks" role="list">
+        <li><a href="/#about">About</a></li>
+        <li><a href="/#services">Services</a></li>
+        <li><a href="/#stylists">Stylists</a></li>
+        <li><a href="/#gallery">Gallery</a></li>
+        <li><a href="/#contact">Contact</a></li>
+        <li><a href="/#join">Join Us</a></li>
+        <li><a href="https://book.squareup.com/appointments/41ot5u1szs723i/location/LVKQ8S0NCQE3R/services" class="nav-book-btn" target="_blank" rel="noopener noreferrer">Book Online</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <div class="error-page">
+      <h1>404</h1>
+      <h2>Page not found</h2>
+      <p>Looks like this page doesn't exist. Let's get you back on track.</p>
+      <a href="/" class="btn-primary" style="font-size:0.85rem;padding:0.7rem 1.8rem;">Back to Home</a>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-social" aria-label="Social media links">
+      <a href="https://www.instagram.com/audreysstylebar/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+      </a>
+      <a href="https://www.facebook.com/p/Audreys-Style-Bar-61565893284820/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+      </a>
+      <a href="https://www.tiktok.com/@audreys.stylebar" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a4 4 0 104 4V4a5 5 0 005 5"/></svg>
+      </a>
+    </div>
+    <p>&copy; 2026 Audrey's Style Bar. All rights reserved.</p>
+    <p style="margin-top:0.4rem;">120 N Collins St, Plant City, FL 33563 &nbsp;|&nbsp; <a href="tel:+18136528100">(813) 652-8100</a></p>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      hamburger.classList.toggle('active');
+      hamburger.setAttribute('aria-expanded', isOpen);
+    });
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        hamburger.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
+      });
+    });
+  </script>
+</body>
+</html>

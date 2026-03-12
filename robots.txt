@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /vendor-event.html
+Disallow: /booth-rental.html
+
+Sitemap: https://www.audreystylebar.com/sitemap.xml
