@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vendor Event Application | Audrey's Style Bar</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <nav aria-label="Main navigation">
+      <a href="index.html" class="nav-logo" aria-label="Audrey's Style Bar home">
+      <img src="assets/logos/black-logo.webp" alt="Audrey's Style Bar">
+    </a>
+      <ul class="nav-links" id="navLinks" role="list">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#stylists">Stylists</a></li>
+        <li><a href="index.html#gallery">Gallery</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+        <li><a href="index.html#join">Join Us</a></li>
+        <li><a href="https://book.squareup.com/appointments/41ot5u1szs723i/location/LVKQ8S0NCQE3R/services" class="nav-book-btn" target="_blank" rel="noopener noreferrer">Book Online</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main id="main">
+
+  <main>
+    <div class="form-page">
+      <div class="form-container">
+        <h1>Vendor Event Application</h1>
+        <div class="rose-divider" aria-hidden="true">
+          <span class="line"></span>
+          <svg class="rose-icon" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="8" stroke="#C25A7C" stroke-width="1"/><path d="M12 20Q16 12 20 12Q24 12 28 20Q24 28 20 28Q16 28 12 20Z" stroke="#C25A7C" stroke-width=".8" fill="none"/><path d="M20 6Q24 13 20 20Q16 13 20 6Z" stroke="#C25A7C" stroke-width=".7" fill="none"/><path d="M20 34Q24 27 20 20Q16 27 20 34Z" stroke="#C25A7C" stroke-width=".7" fill="none"/></svg>
+          <span class="line"></span>
+        </div>
+        <p class="form-intro">We host vendor events roughly once a month at the salon. If you'd like to set up a table and showcase your products or services, fill out the form below and we'll be in touch with details on upcoming dates and availability.</p>
+
+        <div class="form-card">
+          <form name="vendor-event" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+            <p style="display:none;">
+              <label>Don't fill this out: <input name="bot-field"></label>
+            </p>
+            <input type="hidden" name="form-name" value="vendor-event">
+ 
+            <label for="ve-name">Name</label>
+            <input type="text" id="ve-name" name="name" autocomplete="name" required placeholder="Your name">
+ 
+            <label for="ve-email">Email</label>
+            <input type="email" id="ve-email" name="email" autocomplete="email" required placeholder="you@email.com">
+ 
+            <label for="ve-phone">Phone</label>
+            <input type="tel" id="ve-phone" name="phone" autocomplete="tel" required placeholder="(555) 123-4567">
+ 
+            <label for="ve-business">Business / Brand Name</label>
+            <input type="text" id="ve-business" name="business" required placeholder="Your business name">
+ 
+            <label for="ve-type">What do you sell or offer?</label>
+            <input type="text" id="ve-type" name="product-type" required placeholder="e.g. Jewelry, candles, baked goods">
+ 
+            <label for="ve-social">Social Media Link <span class="optional">(optional)</span></label>
+            <input type="url" id="ve-social" name="social" placeholder="https://instagram.com/yourbrand">
+ 
+            <label for="ve-message">Anything else we should know? <span class="optional">(optional)</span></label>
+            <textarea id="ve-message" name="message" placeholder="Special setup needs, questions, etc."></textarea>
+ 
+            <button type="submit">Submit Application</button>
+          </form>
+        </div>
+
+        <a href="index.html" class="back-link">&larr; Back to home</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+    <footer>
+    <div class="footer-social" aria-label="Social media links">
+        <a href="https://www.instagram.com/audreysstylebar/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="https://www.facebook.com/p/Audreys-Style-Bar-61565893284820/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+        </a>
+        <a href="https://www.tiktok.com/@audreys.stylebar" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a4 4 0 104 4V4a5 5 0 005 5"/></svg>
+        </a>
+    </div>
+    <p>&copy; 2026 Audrey's Style Bar. All rights reserved.</p>
+    <p style="margin-top:0.4rem;">120 N Collins St, Plant City, FL 33563 &nbsp;|&nbsp; <a href="tel:+18136528100">(813) 652-8100</a></p>
+    </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      hamburger.classList.toggle('active');
+      hamburger.setAttribute('aria-expanded', isOpen);
+    });
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        hamburger.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
+      });
+    });
+  </script>
+</body>
+</html>
