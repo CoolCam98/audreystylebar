@@ -4,7 +4,7 @@
   --pink-lightest: #FFF5F7;
   --pink-light: #FDDDE6;
   --pink-medium: #F5A6C0;
-  --pink-dark: #C25A7C;
+  --pink-dark: #BE5075;
   --pink-accent: #E8899E;
   --black: #1A1A1A;
   --black-soft: #2E2E2E;
@@ -376,7 +376,7 @@ section { padding: 5rem 1.5rem; }
   color: var(--black);
 }
 .stylist-role {
-  font-size: 1.2rem;
+  font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--pink-dark);
