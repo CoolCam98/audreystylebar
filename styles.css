@@ -454,6 +454,9 @@ section { padding: 5rem 1.5rem; }
 .stylist-card:first-child .stylist-photo img {
   object-position: 50% 25%;
 }
+.stylist-card:nth-child(4) .stylist-photo img {
+  object-position: 50% 20%;
+}
 
 .stylist-photo img { width: 100%; height: 100%; object-fit: cover; }
 .stylist-card h3 {
