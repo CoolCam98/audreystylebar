@@ -451,10 +451,10 @@ section { padding: 5rem 1.5rem; }
   overflow: hidden;
 }
 
-.stylist-card:first-child .stylist-photo img {
+.stylist-card:nth-child(4) .stylist-photo img {
   object-position: 50% 25%;
 }
-.stylist-card:nth-child(4) .stylist-photo img {
+.stylist-card:nth-child(2) .stylist-photo img {
   object-position: 50% 20%;
 }
 
