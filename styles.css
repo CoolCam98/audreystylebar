@@ -65,7 +65,7 @@ nav {
   padding: 0.5rem 1.5rem;
 }
 .nav-logo img {
-  height: 50px;
+  height: 70px;
   width: auto;
 }
 .nav-links {
@@ -417,7 +417,7 @@ section { padding: 5rem 1.5rem; }
 .hero::before {
   content: '';
   position: absolute;
-  top: 80px; left: 20px;
+  top: 100px; left: 20px;
   width: 180px; height: 180px;
   background: url('assets/logos/Bow-top-left.png') no-repeat center/contain;
   pointer-events: none;
@@ -697,7 +697,7 @@ footer a:hover { color: var(--white); }
   .about-image { max-width: 100%; }
 }
 @media (max-width: 700px) {
-  .nav-logo img { height: 38px; }
+  .nav-logo img { height: 70px; }
   .nav-links {
     position: fixed;
     top: 0; right: -100%;
@@ -717,7 +717,7 @@ footer a:hover { color: var(--white); }
   .hero { padding: 8rem 2.5rem 4rem; }
   .hero::before {
     width: 100px; height: 100px;
-    top: 75px; left: 10px;
+    top: 100px; left: 10px;
   }
   .hero::after {
     width: 100px; height: 100px;
