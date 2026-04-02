@@ -307,16 +307,38 @@
           <svg class="rose-icon" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="8" stroke="#C25A7C" stroke-width="1"/><path d="M12 20Q16 12 20 12Q24 12 28 20Q24 28 20 28Q16 28 12 20Z" stroke="#C25A7C" stroke-width=".8" fill="none"/><path d="M20 6Q24 13 20 20Q16 13 20 6Z" stroke="#C25A7C" stroke-width=".7" fill="none"/><path d="M20 34Q24 27 20 20Q16 27 20 34Z" stroke="#C25A7C" stroke-width=".7" fill="none"/></svg>
           <span class="line"></span>
         </div>
-        <div class="gallery-grid">
-          <div class="gallery-item"><img src="assets/photos/IMG_1790.webp" alt="Hair styling work by Audrey's Style Bar" loading="lazy"></div>
-          <div class="gallery-item"><img src="assets/photos/IMG_1932.webp" alt="Hair styling work by Audrey's Style Bar" loading="lazy"></div>
-          <div class="gallery-item"><img src="assets/photos/IMG_1998.webp" alt="Hair styling work by Audrey's Style Bar" loading="lazy"></div>
-          <div class="gallery-item"><img src="assets/photos/IMG_2518.webp" alt="Hair styling work by Audrey's Style Bar" loading="lazy"></div>
-          <div class="gallery-item"><img src="assets/photos/IMG_3101.webp" alt="Hair styling work by Audrey's Style Bar" loading="lazy"></div>
-          <div class="gallery-item"><img src="assets/photos/IMG_3193.webp" alt="Hair styling work by Audrey's Style Bar" loading="lazy"></div>
-          <div class="gallery-item"><img src="assets/photos/IMG_3454.webp" alt="Hair styling work by Audrey's Style Bar" loading="lazy"></div>
-          <div class="gallery-item"><img src="assets/photos/IMG_3554.webp" alt="Hair styling work by Audrey's Style Bar" loading="lazy"></div>
+      <div class="gallery-carousel">
+  <button class="carousel-btn carousel-prev" aria-label="Previous photos">&#8249;</button>
+  <div class="carousel-track-wrapper">
+    <div class="carousel-track" id="galleryTrack">
+            <div class="carousel-slide"><img src="assets/photos/image11.jpeg" alt="Hair styling work by Audrey's Style Bar" loading="lazy"></div>
+            <div class="carousel-slide"><img src="assets/photos/IMG_3101.webp" alt="Hair styling work by Audrey's Style Bar" loading="lazy"></div>
+            <div class="carousel-slide"><img src="assets/photos/image4.jpeg" alt="Hair styling work by Audrey's Style Bar" loading="lazy"></div>
+            <div class="carousel-slide"><img src="assets/photos/IMG_1932.webp" alt="Hair styling work by Audrey's Style Bar" loading="lazy"></div>
+            <div class="carousel-slide"><img src="assets/photos/image16.jpeg" alt="Hair styling work by Audrey's Style Bar" loading="lazy"></div>
+            <div class="carousel-slide"><img src="assets/photos/image1.jpeg" alt="Hair styling work by Audrey's Style Bar" loading="lazy"></div>
+            <div class="carousel-slide"><img src="assets/photos/IMG_3554.webp" alt="Hair styling work by Audrey's Style Bar" loading="lazy"></div>
+            <div class="carousel-slide"><img src="assets/photos/image9.jpeg" alt="Hair styling work by Audrey's Style Bar" loading="lazy"></div>
+            <div class="carousel-slide"><img src="assets/photos/image14.jpeg" alt="Hair styling work by Audrey's Style Bar" loading="lazy"></div>
+            <div class="carousel-slide"><img src="assets/photos/IMG_2518.webp" alt="Hair styling work by Audrey's Style Bar" loading="lazy"></div>
+            <div class="carousel-slide"><img src="assets/photos/image6.jpeg" alt="Hair styling work by Audrey's Style Bar" loading="lazy"></div>
+            <div class="carousel-slide"><img src="assets/photos/image0.jpeg" alt="Hair styling work by Audrey's Style Bar" loading="lazy"></div>
+            <div class="carousel-slide"><img src="assets/photos/IMG_3193.webp" alt="Hair styling work by Audrey's Style Bar" loading="lazy"></div>
+            <div class="carousel-slide"><img src="assets/photos/image12.jpeg" alt="Hair styling work by Audrey's Style Bar" loading="lazy"></div>
+            <div class="carousel-slide"><img src="assets/photos/IMG_1790.webp" alt="Hair styling work by Audrey's Style Bar" loading="lazy"></div>
+            <div class="carousel-slide"><img src="assets/photos/image17.jpeg" alt="Hair styling work by Audrey's Style Bar" loading="lazy"></div>
+            <div class="carousel-slide"><img src="assets/photos/image8.jpeg" alt="Hair styling work by Audrey's Style Bar" loading="lazy"></div>
+            <div class="carousel-slide"><img src="assets/photos/IMG_1998.webp" alt="Hair styling work by Audrey's Style Bar" loading="lazy"></div>
+            <div class="carousel-slide"><img src="assets/photos/image15.jpeg" alt="Hair styling work by Audrey's Style Bar" loading="lazy"></div>
+            <div class="carousel-slide"><img src="assets/photos/image2.jpeg" alt="Hair styling work by Audrey's Style Bar" loading="lazy"></div>
+            <div class="carousel-slide"><img src="assets/photos/IMG_3454.webp" alt="Hair styling work by Audrey's Style Bar" loading="lazy"></div>
+            <div class="carousel-slide"><img src="assets/photos/image10.jpeg" alt="Hair styling work by Audrey's Style Bar" loading="lazy"></div>
+            <div class="carousel-slide"><img src="assets/photos/image7.jpeg" alt="Hair styling work by Audrey's Style Bar" loading="lazy"></div>
+            <div class="carousel-slide"><img src="assets/photos/image13.jpeg" alt="Hair styling work by Audrey's Style Bar" loading="lazy"></div>
+            <div class="carousel-slide"><img src="assets/photos/image5.jpeg" alt="Hair styling work by Audrey's Style Bar" loading="lazy"></div>
+          </div>
         </div>
+        <button class="carousel-btn carousel-next" aria-label="Next photos">&#8250;</button>
       </div>
     </section>
 
@@ -459,6 +481,40 @@
     }, { threshold: 0.15 });
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
+  </script>
+  <script>
+  (function() {
+    const track = document.getElementById('galleryTrack');
+    const total = track.children.length;
+    let position = 0;
+
+    function getVisible() {
+        if (window.innerWidth <= 700) return 1;
+        if (window.innerWidth <= 900) return 3;
+        return 4;
+      }
+
+    function update() {
+      const max = total - getVisible();
+      if (position > max) position = max;
+      if (position < 0) position = 0;
+      track.style.transform = `translateX(-${position * (100 / getVisible())}%)`;
+    }
+
+    document.querySelector('.carousel-next').addEventListener('click', () => {
+      position += getVisible();
+      if (position >= total) position = 0;
+      update();
+    });
+
+    document.querySelector('.carousel-prev').addEventListener('click', () => {
+      position -= getVisible();
+      if (position < 0) position = Math.max(0, total - getVisible());
+      update();
+    });
+
+    window.addEventListener('resize', update);
+  })();
   </script>
 </body>
 </html>
